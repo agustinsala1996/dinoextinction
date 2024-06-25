@@ -9,7 +9,7 @@ export default class End extends Phaser.Scene {
   }
   create() {
     this.r = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
-    this.add.image;
+    this.instrucciones = this.add.image(400, 300, "instrucciones");
   }
   update() {
     if (this.r.isDown) {
