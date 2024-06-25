@@ -1,6 +1,7 @@
 import Start from "./scenes/Start.js";
 import Game from "./scenes/Game.js";
 import End from "./scenes/End.js";
+import Instructions from "./scenes/Instructions.js";
 const config = {
   width: 800,
   height: 600,
@@ -22,7 +23,7 @@ const config = {
       debug: true,
     },
   },
-  scene: [Start, Game, End],
+  scene: [Start, Game, Instructions, End],
 };
 
 window.game = new Phaser.Game(config);

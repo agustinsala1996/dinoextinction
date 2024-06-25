@@ -14,22 +14,22 @@ export default class Game extends Phaser.Scene {
 
   preload() {
     //fondo
-    this.load.image("fondo", "../public/assets/fondo.png");
+    this.load.image("fondo", "./public/assets/fondo.png");
 
     //personaje SE VE MAL
-    this.load.image("personaje", "../public/assets/tercero.png");
+    this.load.image("personaje", "./public/assets/tercero.png");
 
     //enemigo
-    this.load.image("enemigo", "../public/assets/enemigo.png");
+    this.load.image("enemigo", "./public/assets/enemigo.png");
 
     //boss
-    this.load.image("boss", "../public/assets/boss.png");
+    this.load.image("boss", "./public/assets/boss.png");
   }
 
   create() {
     //fondo
     this.fondo = this.add.image(400, 300, "fondo");
-    this.fondo.setScale(0.5);
+    this.fondo.setScale(1);
 
     //personaje
     this.personaje = this.physics.add.sprite(400, 300, "personaje");
@@ -114,7 +114,7 @@ export default class Game extends Phaser.Scene {
     // Aumentar la velocidad del jefe gradualmente hasta que alcance la velocidad máxima
     if (this.bossSpeed < this.maxSpeed) {
       // Incrementar la velocidad en 1 (o el valor que desees para controlar la aceleración)
-      this.bossSpeed += 0.01;
+      this.bossSpeed += 0.02;
     }
 
     this.bossSpeed = Math.min(this.bossSpeed, this.maxSpeed);
